@@ -1,6 +1,7 @@
 \documentclass{../gdutthesis}
 
-\usepackage[algochapter]{algorithm2e}
+\usepackage{algorithmic}
+\usepackage[ruled,vlined,algochapter]{algorithm2e}
 \renewcommand{\thealgocf}{\thechapter-\arabic{algocf}}
 \renewcommand{\algorithmcfname}{算法}
 
@@ -18,8 +19,19 @@
 
 \autoref{alg:test}
 
-\begin{algorithm}
+\begin{center}
+\begin{minipage}{1.0\linewidth}
+\begin{algorithm}[H]
+\SetKwInOut{KIN}{输入}
+\SetKwInOut{KOUT}{输出}
   \caption{test}\label{alg:test}
+  \KIN{在这里编写输入参数1，参数2...}% 输入参数
+  \KOUT{在这里编写输出参数1，参数2...}% 输出
+  \begin{algorithmic}[1]
+  \STATE 说一些东西
+  \end{algorithmic}
 \end{algorithm}
+\end{minipage}
+\end{center}
 
 \end{document}
